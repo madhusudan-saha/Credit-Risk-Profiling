@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Tradeoff Analytics Sample Application</title>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.js"></script>
+  <script type="text/javascript" src="http://ta-cdn.mybluemix.net/v1/TradeoffAnalytics.js"></script>
+  <script>
+  (function(){
+    var ta;
+    var problemPath = 'data.json';
+    
+    function onPageLoad() {
+      $('.loading').show();
+      ta = loadTradeoffAnalytics('ta', onTAReady);
+    }
+    
+    function loadTradeoffAnalytics(node, callback) {
+      var taClient = new TradeoffAnalytics({
+          dilemmaServiceUrl: '/demo/dilemmas',
+      }, node);
+      taClient.start(callback);
+      return taClient;
+    }
+
+    function onTAReady() {
+      $.getJSON(problemPath, function(problem) {
+        ta.show(problem, function () {
+          $('.loading', ta.node).hide();
+          ta.resize();
+        });
+      });
+    }
+
+      $(document).ready(onPageLoad);
+  })();
+  </script>
+
+</head>
+
+<body>
+  <div id="ta" style="height:700px">
+    <span class="loading">
+      <img src="loading.gif" title="Loading...">
+      <span style="margin-left:5px">Loading...</span>
+    </span>
+  </div>
+</body>
+
+</html>

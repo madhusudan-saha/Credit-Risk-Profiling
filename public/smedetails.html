@@ -1,0 +1,374 @@
+<head> 
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<style type="text/css">
+.form-style-5{
+    max-width: 500px;
+    padding: 10px 20px;
+    background: #f4f7f8;
+    margin: 10px auto;
+    padding: 20px;
+    background: #f4f7f8;
+    border-radius: 8px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+.form-style-5 fieldset{
+    border: none;
+}
+.form-style-5 legend {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+.form-style-5 label {
+    display: block;
+    margin-bottom: 8px;
+}
+.form-style-5 input[type="text"],
+.form-style-5 input[type="date"],
+.form-style-5 input[type="datetime"],
+.form-style-5 input[type="email"],
+.form-style-5 input[type="number"],
+.form-style-5 input[type="search"],
+.form-style-5 input[type="time"],
+.form-style-5 input[type="url"],
+.form-style-5 textarea,
+.form-style-5 select {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    background: rgba(255,255,255,.1);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 0;
+    outline: 0;
+    padding: 7px;
+    width: 100%;
+    box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+    background-color: #e8eeef;
+    color:#8a97a0;
+    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 30px;
+    
+}
+.form-style-5 input[type="text"]:focus,
+.form-style-5 input[type="date"]:focus,
+.form-style-5 input[type="datetime"]:focus,
+.form-style-5 input[type="email"]:focus,
+.form-style-5 input[type="number"]:focus,
+.form-style-5 input[type="search"]:focus,
+.form-style-5 input[type="time"]:focus,
+.form-style-5 input[type="url"]:focus,
+.form-style-5 textarea:focus,
+.form-style-5 select:focus{
+    background: #d2d9dd;
+}
+.form-style-5 select{
+    -webkit-appearance: menulist-button;
+    height:35px;
+}
+.form-style-5 .number {
+    background: #1abc9c;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 4px;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+    border-radius: 15px 15px 15px 0px;
+}
+
+.form-style-5 input[type="submit"],
+.form-style-5 input[type="button"]
+{
+    position: relative;
+    display: block;
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    margin: 0 auto;
+    background: #1abc9c;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    width: 100%;
+    border: 1px solid #16a085;
+    border-width: 1px 1px 3px;
+    margin-bottom: 10px;
+}
+.form-style-5 input[type="submit"]:hover,
+.form-style-5 input[type="button"]:hover
+{
+    background: #109177;
+}
+
+#tradeoff {
+display: none;
+}
+</style>
+<body background="http://www.freelargeimages.com/wp-content/uploads/2014/12/Black_background.jpg">
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    background-color: transparent;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: #1abc9c;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #1abc9c;
+	color: white
+}
+
+li a.active {
+    color: white;
+    background-color: #1abc9c;
+}
+</style>
+
+<style>
+p {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 0em;
+    margin-left: 500em;
+    margin-right: 2em;
+}
+</style>
+</head>
+<body>
+
+
+<div class="form-style-5">
+<ul>
+  <img src="logo.png" height="42" width="42" >
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="configuration.html">Configuration</a></li>
+  <li><a href="index.html">Home</a></li>
+</ul>
+
+<fieldset>
+<hr color="#1abc9c">
+<br>
+
+</style>
+<div class="form-style-5">
+<form action=/tradeoff method="GET">
+<fieldset>
+<legend><h4>Bank Name</h4></legend>
+<select id="bank_name" name="bank">
+  <option value="empty">--Select--</option>
+  <option value="hdfc">HDFC Bank</option>
+  <option value="icici">ICICI Bank</option>
+  <option value="axis">AXIS Bank</option>
+  <option value="sbi">SBI Bank</option>
+</select>
+<legend><h2> Candidate Info </h2></legend>
+<input type="text" id="name_sme" name="field1" placeholder="Name of SME">
+<input type="number" id="amt_req" name="field2" placeholder="Amount of loan requested">
+
+<label for="Repayment">Repayment track record</label>
+<select id="rpmnt_rec" name="field4">
+  <option value="empty">--Select--</option>
+  <option value="4">Within 7 days</option>
+  <option value="3">7-15 days</option>
+  <option value="1">15-30 days</option>
+  <option value="0">More than 30 days</option>
+</select>
+<label for="Change in Turnover">Change in Turnover</label>
+<select id="chngturnover" name="field5">
+  <option value="empty">--Select--</option>
+  <option value="5">Increase more than 10%</option>
+  <option value="4">Increase upto 10%</option>
+  <option value="2">Decrease less than 10%</option>
+  <option value="0">Decrease more than 10%</option>
+</select>
+<input type="number" id ="emi" name="emi" placeholder="EMI to be paid">
+<input type="number" id ="nmi" name="nmi" placeholder="Net Monthly Income">
+<input type="number" id ="cost" name="cost" placeholder="Expected cost of the project">
+<input type="number" id ="coll" name="coll" placeholder="Net worth of collaterals">
+<label for="Experience">Experience</label>
+<select id="exp" name="field4">
+  <option value="empty">--Select--</option>
+  <option value="5">Greater than 5 yrs</option>
+  <option value="3">3-5 yrs</option>
+  <option value="2">2-3 yrs</option>
+  <option value="1">1-2 yrs</option>
+  <option value="0">less than one year</option>
+</select>
+<label for="Qualification">Qualification</label>
+<select id="qua" name="qua">
+  <option value="empty">--Select--</option>
+  <option value="5">Post Graduate</option>
+  <option value="4">Graduate</option>
+  <option value="2">Schooling Complete</option>
+  <option value="0">Incomplete Schooling/No Schooling</option>
+</select>
+<label for="Loyalty">Account holder in the bank for:</label>
+<select id="loyalty" name="Loyalty">
+  <option value="empty">--Select--</option>
+  <option value="5">More than 5 yrs</option>
+  <option value="4">3-5yrs</option>
+  <option value="3">2-3yrs</option>
+  <option value="2">1-2yrs</option>
+  <option value="1">less than 1 year</option>
+  <option value="0">Never had an account</option>
+</select>
+</fieldset>
+<input type="button" id="submit" value="Apply"/>
+<input type="submit" id="tradeoff" value="Go to tradeoff"/>
+</form>
+</div>
+<script type='text/javascript'>
+var config;
+var points=0;
+
+function calculate(data)
+{
+	config=data;
+	var emi=document.getElementById("emi").value
+	var nmi=document.getElementById("nmi").value
+	var emi_nmi=emi/nmi;
+	var amt=document.getElementById("amt_req").value;
+        var bank_name=document.getElementById("bank_name").value
+	var reypay=document.getElementById("rpmnt_rec").value;
+	var ch_turn=document.getElementById("chngturnover").value;
+	var cost=document.getElementById("cost").value;
+	var coll=document.getElementById("coll").value;
+	var exp=document.getElementById("exp").value;
+	var qual=document.getElementById("qua").value;
+	var loyalty=document.getElementById("loyalty").value;
+	var loan_cost=amt/cost;
+	var coll_loan=coll/amt;
+	
+	if(emi=="" || nmi=="" || amt=="" || reypay=="empty" || ch_turn=="empty" || cost=="" || coll=="" || exp=="empty" || qual=="empty" || loyalty=="empty")
+	{
+		window.alert("All fields are mandatory");
+	}
+	else
+	{
+		var pexp, pemi_nmi, prepay, ploantocost, pqual, ployalty, pgrowth_rate, pcollateraltoloan;  
+		if(exp==5)
+		{
+			pexp=(config.Experience*5)/5;
+		}
+		else if(exp==3)
+		{
+			pexp=(config.Experience*3)/5;
+		}
+		else if(exp==2)
+		{
+			pexp=(config.Experience*2)/5;
+		}
+		else if(exp==1)
+		{
+			pexp=(config.Experience*1)/5
+		}
+		else if(exp==0)
+		{
+			pexp=0;
+		}
+
+		if(emi_nmi>=0.8)
+		{
+			pemi_nmi=(config.emi_nmi*0)/5;
+		}
+		else if(emi_nmi>=0.6 && emi_nmi<0.8)
+		{
+			pemi_nmi=(config.emi_nmi*1)/5
+		}
+		else if(emi_nmi>=0.4 && emi_nmi<0.6)
+		{
+			pemi_nmi=(config.emi_nmi*3)/5
+		}
+		else if(emi_nmi>=0.2 && emi_nmi<0.4)
+		{
+			pemi_nmi=(config.emi_nmi*4)/5
+		}
+		else if(emi_nmi<0.2)
+		{
+			pemi_nmi=(config.emi_nmi*5)/5
+		}
+		prepay=(config.loan_details*reypay)/5;
+		if(loan_cost>=0.8)
+		{
+			ploantocost=0;
+		}
+		else if(loan_cost>=0.6 && loan_cost<0.8)
+		{
+			ploantocost=(config.loantocost*1)/5;
+		}
+		else if(loan_cost>=0.4 && loan_cost<0.6)
+		{
+			ploantocost=(config.loantocost*3)/5;
+		}
+		else if(loan_cost>=0.2 && loan_cost<0.4)
+		{
+			ploantocost=(config.loantocost*4)/5;
+		}
+		else if(loan_cost<0.2)
+		{
+			ploantocost=(config.loantocost*5)/5;
+		}
+		if(coll_loan<=0.2)
+		{
+			pcollateraltoloan=0;
+		}
+		else if(coll_loan>0.2 && coll_loan<=0.4)
+		{
+			pcollateraltoloan=(config.colltoloan*1)/5;
+		}
+		else if(coll_loan>0.4 && coll_loan<=0.6)
+		{
+			pcollateraltoloan=(config.colltoloan*3)/5;
+		}
+		else if(coll_loan>0.6 && coll_loan<=0.8)
+		{
+			pcollateraltoloan=(config.colltoloan*4)/5;
+		}
+		else if(coll_loan>0.8)
+		{
+			pcollateraltoloan=(config.colltoloan*5)/5;
+		}
+		pgrowth_rate=(config.growth_rate*ch_turn)/5;
+		ployalty=config.loyalty*loyalty/5;
+		pqual=config.qual*qual/5;
+		points=pexp*1 + pemi_nmi*1 + prepay*1 + ploantocost*1 + pqual*1 + ployalty*1 + pgrowth_rate*1 + pcollateraltoloan*1;
+
+		$.post("/smename", {Name:document.getElementById("name_sme").value}, function(data){});
+		$.post("/static", {Name:document.getElementById("name_sme").value, Score1:points}, function(data){}); 	
+		window.alert("The CRA Score is " + points);		
+	}
+	if(points!=0)
+		$("#tradeoff").show();
+}
+
+$("#submit").click(function(){
+var bank_name=document.getElementById("bank_name").value	
+var file = "../data/";
+	file +=bank_name+".json"; 
+   $.getJSON(file, function(data){
+	calculate(data);
+   })
+   .error(function() { alert("Bank configuration file not found."); });
+
+});
+
+</script>

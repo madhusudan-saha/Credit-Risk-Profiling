@@ -1,0 +1,33 @@
+//- layout.jade
+doctype html
+html(lang='en')
+  head
+    block title
+      title Tradeoff Analytics
+
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    link(rel='shortcut icon', href='/images/favicon.ico', type='image/x-icon')
+    link(rel='icon', href='/images/favicon.ico', type='image/x-icon')
+    link(rel='stylesheet', href='/css/watson-bootstrap-dark.css')
+    link(rel='stylesheet', href='/css/banner.css')
+    link(rel='stylesheet', href='/css/style.css')
+
+  body
+    div.container
+      div.row
+        div.col-lg-12
+          div.row.header(style='padding-bottom:0px;')
+            div.avatar.img-container.col-lg-1.col-xs-1
+              img(src='/images/app.png')
+            div.col-lg-6.col-xs-6
+              h2 Score Calculation using Tradeoff Analytics
+         
+      block row-content   
+       
+    script(src="/js/jquery-1.11.1.min.js")
+    script(src='https://ta-cdn.mybluemix.net/v1/TradeoffAnalytics.js')
+    script(src='js/index.js')
+    script(src='js/ga.js')

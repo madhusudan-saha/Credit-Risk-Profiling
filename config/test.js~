@@ -1,0 +1,13 @@
+'use strict';
+var express      = require("express");
+
+//var obj = {name: 'JP'}
+
+module.exports = function(jsonfile, obj) {
+	var file = 'data/'
+	file += obj.bank_name;
+	jsonfile.writeFile(file, obj, function (err) {
+  	console.error(err)
+})
+	
+}

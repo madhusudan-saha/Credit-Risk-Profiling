@@ -1,0 +1,13 @@
+'use strict';
+var express      = require("express"),
+	jsonfile = require('./jsonfile'),
+	util = require('util');
+
+module.exports = function(filename) {
+	var file = 'data/'
+	file += filename;
+	jsonfile.readFile(file, function(err, obj) {
+  		console.dir(obj)
+	})
+	
+}

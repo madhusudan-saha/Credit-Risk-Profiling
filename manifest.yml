@@ -1,0 +1,11 @@
+applications:
+- path: .
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  name: watsoncreditscore
+  host: watsoncreditscore
+  disk_quota: 1024M
+  services:
+  - Tradeoff Analytics-td
+  - Personality Insights-l8
